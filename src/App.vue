@@ -1,7 +1,7 @@
 <template>
-  <Item msg="Item 1"></Item>
-  <Item msg="Item 2"></Item>
-  <Item msg="Item 3"></Item>
+  <Item name="Folder 1" description="0 items"></Item>
+  <Item name="Folder 2" description="3 items"></Item>
+  <Item name="Folder 3" description="2 items"></Item>
 </template>
 
 <script>
@@ -17,9 +17,6 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 30px;
 }

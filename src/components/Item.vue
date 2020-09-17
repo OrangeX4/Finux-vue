@@ -1,7 +1,11 @@
 <template>
   <div class="root">
     <img src="../assets/folder.png">
-    <span>{{ msg }}</span>
+    <div class="text"> 
+      <span class="name">{{ name }}</span>
+      <br />
+      <span class="description">{{ description }}</span>
+    </div>
   </div>
 </template>
 
@@ -9,7 +13,8 @@
   export default {
     name: 'Item',
     props: {
-      msg: String
+      name: String,
+      description: String
     }
   }
 </script>
@@ -21,13 +26,23 @@
     height: 70px;
   }
 
-  span {
+  .text {
+    padding-top: 6px;
+  }
+
+  .name {
     font-size: 15px;
     font-weight: bold;
     padding-left: 10px;
-    padding-top: 10px;
+    padding: 10px;
     height: 15px;
-    float: left;
+
+  }
+  .description {
+    font-size: 12px;
+    color: #A9A9A9;
+    padding-left: 10px;
+    height: 12px;
   }
 
   img {
