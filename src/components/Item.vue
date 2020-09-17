@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <img src="../assets/folder.png">
+    <img :src="imgStr">
     <div class="text"> 
       <span class="name">{{ name }}</span>
       <br />
@@ -14,7 +14,21 @@
     name: 'Item',
     props: {
       name: String,
-      description: String
+      description: String,
+      icon: String
+    },
+    data(){
+      return{
+          folder: require('../assets/folder.png'),
+          file: require('../assets/file.png')
+      }
+    },
+    computed:{
+      imgStr() {
+        if(this.$props.icon == "folder") return this.$data.folder
+        else if(this.$props.icon == "file") return this.$data.file
+        else return this.$data.file
+      }
     }
   }
 </script>

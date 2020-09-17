@@ -1,16 +1,19 @@
 <template>
-  <Item name="Folder 1" description="0 items"></Item>
-  <Item name="Folder 2" description="3 items"></Item>
-  <Item name="Folder 3" description="2 items"></Item>
+  <breadcrumb text=" / home / test"></breadcrumb>
+  <Item name="Folder 1" description="0 Items" icon="folder"></Item>
+  <Item name="Folder 2" description="3 Items" icon="folder"></Item>
+  <Item name="File 1" description="233 KiB" icon="file"></Item>
 </template>
 
 <script>
 import Item from './components/Item.vue'
+import Breadcrumb from './components/Breadcrumb.vue'
 
 export default {
   name: 'App',
   components: {
-    Item
+    Item,
+    Breadcrumb
   }
 }
 </script>
