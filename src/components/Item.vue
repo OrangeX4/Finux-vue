@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img src="../assets/folder-close.png" width="50" height="50">
+  <div class="root">
+    <img src="../assets/folder.png" width="50" height="50">
     <span>{{ msg }}</span>
   </div>
 </template>
@@ -16,13 +16,23 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  div * {
+  .root {
     vertical-align: middle;
+    height: 50px;
   }
 
-  div {
-    padding: 0;
-    margin: 0;
-    width: 100%
+  span {
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 15px;
+    float: left;
   }
+
+  img {
+    padding-left: 20px;
+    float: left;
+  }
+
 </style>

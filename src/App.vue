@@ -1,6 +1,7 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
   <Item msg="Item 1"></Item>
+  <Item msg="Item 2"></Item>
+  <Item msg="Item 3"></Item>
 </template>
 
 <script>
@@ -22,5 +23,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+html,body {
+  width: 100%;
+  height: 100%
 }
 </style>
