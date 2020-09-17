@@ -1,5 +1,7 @@
 # finux
 
+A file manager for mobile linux like Termux.
+
 ## Project setup
 ```
 yarn install
