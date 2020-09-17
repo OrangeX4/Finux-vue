@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <img src="../assets/folder.png" width="50" height="50">
+    <img src="../assets/folder.png">
     <span>{{ msg }}</span>
   </div>
 </template>
@@ -18,7 +18,7 @@
 <style scoped>
   .root {
     vertical-align: middle;
-    height: 50px;
+    height: 70px;
   }
 
   span {
@@ -33,6 +33,8 @@
   img {
     padding-left: 20px;
     float: left;
+    width: 50px;
+    height: 50px;
   }
 
 </style>
