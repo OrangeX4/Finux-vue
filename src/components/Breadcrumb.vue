@@ -1,5 +1,5 @@
 <template>
-  <p>{{ text }}</p>
+  <p>{{ showedText }}</p>
 </template>
 
 <script>
@@ -7,6 +7,11 @@
     name: 'Breadcrumb',
     props: {
         text: String
+    },
+    computed: {
+        showedText() {
+          return this.$props.text.replace(/\//g, ' / ')
+        }
     }
   }
 </script>

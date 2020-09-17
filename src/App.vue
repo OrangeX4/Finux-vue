@@ -1,5 +1,5 @@
 <template>
-  <breadcrumb text=" / home / test"></breadcrumb>
+  <breadcrumb text="/home/test"></breadcrumb>
   <Item name="Folder 1" description="0 Items" icon="folder"></Item>
   <Item name="Folder 2" description="3 Items" icon="folder"></Item>
   <Item name="File 1" description="233 KiB" icon="file"></Item>
