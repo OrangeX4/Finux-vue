@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div @click="clicked" class="root">
     <img :src="imgStr">
     <div class="text"> 
       <span class="name">{{ name }}</span>
@@ -21,6 +21,11 @@
       return{
           folder: require('../assets/folder.png'),
           file: require('../assets/file.png')
+      }
+    },
+    methods:{
+      clicked() {
+        alert('Click ' + this.$props.name)
       }
     },
     computed:{

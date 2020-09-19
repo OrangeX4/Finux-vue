@@ -1,17 +1,29 @@
 <template>
-  <p>{{ showedText }}</p>
+  <p @click="doCopy">{{ isSpace ? showedText : text }}</p>
 </template>
 
 <script>
   export default {
     name: 'Breadcrumb',
     props: {
-        text: String
+      text: String
+    },
+    data(){
+      return {
+        isSpace: true
+      }
+    },
+    methods: {
+      doCopy() {
+        this.$data.isSpace = !this.$data.isSpace
+        if(this.$data.isSpace == false)
+        alert('Can not copy, please copy it by yourself.')
+      }
     },
     computed: {
-        showedText() {
-          return this.$props.text.replace(/\//g, ' / ')
-        }
+      showedText() {
+        return this.$props.text.replace(/\//g, ' / ')
+      }
     }
   }
 </script>
@@ -24,5 +36,4 @@
     padding-left: 20px;
     height: 20px;
   }
-
 </style>
