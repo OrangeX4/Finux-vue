@@ -16,10 +16,9 @@
       Item,
       Breadcrumb
     },
-    // created () {
-    // console.log(this.$store)
-    // console.log(this.$store.state.current)
-    // },
+    created () {
+      this.$store.commit('forward', '/home')
+    },
     computed: {
       currentFolder() {
         return this.$store.state.current

@@ -40,6 +40,8 @@ export default createStore({
   },
   mutations: {
     forward(state, dirname) {
+      // console.log('success')
+
       var url = 'http://127.0.0.1:1984/dir?dir=' + dirname
 
       var xhr = new XMLHttpRequest()
@@ -47,8 +49,12 @@ export default createStore({
       xhr.send()
       xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-          var res = xhr.responseText
-          state = JSON.parse(res)
+          var res = JSON.parse(xhr.responseText)
+          
+          state.isExist = res.isExist
+          state.current = res.current
+          state.dirs = res.dirs
+          state.files = res.files
         }
       };
     }
