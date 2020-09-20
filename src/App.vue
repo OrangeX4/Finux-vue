@@ -15,6 +15,12 @@ export default {
   components: {
     Item,
     Breadcrumb
+  },
+  created () {
+    // console.log(this.store)
+    console.log(this.$store)
+    // console.log(store)
+
   }
 }
 
